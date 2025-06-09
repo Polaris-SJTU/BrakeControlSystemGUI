@@ -1,17 +1,10 @@
 import sys
-from uis.brake_control_system import Ui_Form
-from PyQt5.QtWidgets import QMainWindow, QApplication
-
-
-class BrakeControlSystemGUI(QMainWindow, Ui_Form):
-    def __init__(self):
-        super(BrakeControlSystemGUI, self).__init__()
-        self.setupUi(self)
-        self.showFullScreen()
-
+from PyQt5.QtWidgets import QApplication
+from modules.gui import BrakeControlSystemGUI
 
 if __name__ == "__main__":
+    machine_id = "A"
     app = QApplication(sys.argv)
-    window = BrakeControlSystemGUI()
+    window = BrakeControlSystemGUI(machine_id)
     window.show()
     sys.exit(app.exec_())

@@ -4439,7 +4439,7 @@ class Ui_Form(object):
         font.setPointSize(12)
         self.label_serverA_state.setFont(font)
         self.label_serverA_state.setStyleSheet("background-color: rgb(0, 0, 0);\n"
-"color: rgb(0, 255, 0);\n"
+"color: rgb(255, 0, 0);\n"
 "border: 2px solid gray;\n"
 "")
         self.label_serverA_state.setAlignment(QtCore.Qt.AlignCenter)
@@ -4524,7 +4524,7 @@ class Ui_Form(object):
         font.setPointSize(12)
         self.label_SAM1_state.setFont(font)
         self.label_SAM1_state.setStyleSheet("background-color: rgb(0, 0, 0);\n"
-"color: rgb(0, 255, 0);\n"
+"color: rgb(255, 0, 0);\n"
 "border: 2px solid gray;\n"
 "")
         self.label_SAM1_state.setAlignment(QtCore.Qt.AlignCenter)
@@ -5003,11 +5003,11 @@ class Ui_Form(object):
         self.label_handorauto.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">控制方式</span></p></body></html>"))
         self.label_control_method.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">人工</span></p></body></html>"))
         self.label_serverA.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">服务器A</span></p></body></html>"))
-        self.label_serverA_state.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">主用</span></p></body></html>"))
+        self.label_serverA_state.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">备用</span></p></body></html>"))
         self.label_serverB.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">服务器B</span></p></body></html>"))
         self.label_serverB_state.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">备用</span></p></body></html>"))
         self.label_SAM1.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">SAM1</span></p></body></html>"))
-        self.label_SAM1_state.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">主用</span></p></body></html>"))
+        self.label_SAM1_state.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">备用</span></p></body></html>"))
         self.label_SAM2.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">SAM2</span></p></body></html>"))
         self.label_SAM2_state.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">备用</span></p></body></html>"))
         self.BTN_brake.setText(_translate("Form", "制动控制"))
