@@ -21,7 +21,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         self.local_status = None
         self.remote_role = None
         self.remote_status = None
-        self.hot_standby = HotStandby(machine_id)
+        self.hot_standby = HotStandby()
         self.hot_standby.status_updated.connect(self.update_hot_standby_status)
 
         # 日志模块

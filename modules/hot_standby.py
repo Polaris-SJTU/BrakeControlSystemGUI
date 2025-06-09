@@ -23,85 +23,107 @@ class HotStandby(QObject):
     # 定义状态更新信号
     status_updated = pyqtSignal(dict)
 
-    def __init__(self, machine_id):
+    def __init__(self):
         super().__init__()
-        self.machine_id = machine_id
+        # Removed machine_id as it's no longer needed for IP determination
 
-        self.local_ip = "192.168.1.106" if machine_id == "A" else "192.168.1.110"
-        self.remote_ip = "192.168.1.110" if machine_id == "A" else "192.168.1.106"
+        self.local_ip = self.get_local_ip()  # Automatically detect local IP
+        self.remote_ip = None  # Will be discovered dynamically
         self.heartbeat_port = 8888
-        self.heartbeat_interval = 0.5  # 心跳间隔秒数
-        self.timeout_threshold = 2  # 超时阈值秒数
+        self.heartbeat_interval = 0.2  # Faster heartbeat interval
+        self.timeout_threshold = 0.6  # Faster timeout threshold (e.g., 3 * heartbeat_interval)
+        self.discovery_interval = 1.0 # How often to scan for other machines
 
-        # 状态变量
+        # State variables
         self.local_role = MachineRole.BACKUP
         self.local_status = HeartbeatStatus.OFFLINE
         self.remote_role = MachineRole.BACKUP
         self.remote_status = HeartbeatStatus.OFFLINE
         self.last_heartbeat_time = None
         self.heartbeat_received = False
-        self.dual_master_check_time = None  # 双主机检测时间
-        self.dual_master_resolve_delay = 2  # 双主机解决延迟秒数
+        self.dual_master_check_time = None
+        self.dual_master_resolve_delay = 0.5  # Faster dual-master resolution
 
-        # 更新设备状态
+        # Update device status
         self.update_status()
 
-        # 网络组件
+        # Network components
         self.udp_socket = None
         self.heartbeat_timer = None
         self.monitor_timer = None
+        self.discovery_timer = None # New timer for IP discovery
         self.running = False
+        self.listen_thread = None
         self.stop_event = threading.Event()
 
         self.start_service()
 
+    @staticmethod
+    def get_local_ip():
+        """
+        Automatically detects the local IP address within the 192.168.1.x range.
+        """
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            # Connect to a dummy address to get the local IP
+            s.connect(('192.168.1.1', 1))
+            IP = s.getsockname()[0]
+        except Exception:
+            IP = '127.0.0.1' # Fallback to loopback if no network is available
+        finally:
+            s.close()
+        print(f"Detected Local IP: {IP}")
+        return IP
+
     def update_status(self):
-        """更新设备状态"""
+        """Updates device status and emits the signal."""
         status_data = {
             'local_role': self.local_role,
             'local_status': self.local_status,
             'remote_role': self.remote_role,
-            'remote_status': self.remote_status
+            'remote_status': self.remote_status,
+            'local_ip': self.local_ip,
+            'remote_ip': self.remote_ip
         }
         self.status_updated.emit(status_data)
 
     def start_service(self):
-        """启动心跳服务"""
+        """Starts the heartbeat service."""
         try:
-            # 创建UDP套接字
+            # Create UDP socket
             self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            self.udp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1) # Enable broadcast for discovery
             self.udp_socket.bind(('', self.heartbeat_port))
-            self.udp_socket.settimeout(1.0)
+            self.udp_socket.settimeout(0.1) # Shorter timeout for faster listening
 
             self.running = True
             self.stop_event.clear()
 
-            # 启动监听线程
+            # Start listening thread
             self.listen_thread = threading.Thread(target=self.listen_heartbeat, daemon=True)
             self.listen_thread.start()
 
             self.local_status = HeartbeatStatus.ONLINE
 
-            print(f"服务已启动，本机IP: {self.local_ip}, 对方IP: {self.remote_ip}, 端口: {self.heartbeat_port}")
+            print(f"服务已启动，本机IP: {self.local_ip}, 端口: {self.heartbeat_port}")
 
-            # 初始角色判断
-            self.determine_initial_role()
-
-            # 启动心跳定时器
+            # Start heartbeat timer
             self.start_heartbeat_timer()
-            # 启动状态监控定时器
+            # Start status monitor timer
             self.start_monitor_timer()
+            # Start IP discovery timer
+            self.start_discovery_timer()
 
         except Exception as e:
             print(f"错误：启动服务失败: {str(e)}")
             self.stop_service()
 
     def stop_service(self):
-        """停止心跳服务"""
+        """Stops the heartbeat service."""
         self.running = False
         self.stop_event.set()
 
-        # 取消定时器
+        # Cancel timers
         if self.heartbeat_timer:
             self.heartbeat_timer.cancel()
             self.heartbeat_timer = None
@@ -110,47 +132,58 @@ class HotStandby(QObject):
             self.monitor_timer.cancel()
             self.monitor_timer = None
 
+        if self.discovery_timer:
+            self.discovery_timer.cancel()
+            self.discovery_timer = None
+
         if self.udp_socket:
             self.udp_socket.close()
             self.udp_socket = None
 
-        # 重置状态
+        # Reset state
         self.local_role = MachineRole.BACKUP
         self.local_status = HeartbeatStatus.OFFLINE
         self.remote_role = MachineRole.BACKUP
         self.remote_status = HeartbeatStatus.OFFLINE
         self.last_heartbeat_time = None
+        self.remote_ip = None # Reset remote IP
         self.dual_master_check_time = None
 
         self.update_status()
         print("服务已停止")
 
     def start_heartbeat_timer(self):
-        """启动心跳定时器"""
+        """Starts the heartbeat timer."""
         if not self.running:
             return
-
         if self.heartbeat_timer:
             self.heartbeat_timer.cancel()
-
         self.heartbeat_timer = threading.Timer(self.heartbeat_interval, self.send_heartbeat_task)
         self.heartbeat_timer.daemon = True
         self.heartbeat_timer.start()
 
     def start_monitor_timer(self):
-        """启动状态监控定时器"""
+        """Starts the status monitoring timer."""
         if not self.running:
             return
-
         if self.monitor_timer:
             self.monitor_timer.cancel()
-
-        self.monitor_timer = threading.Timer(1.0, self.monitor_task)
+        self.monitor_timer = threading.Timer(0.1, self.monitor_task) # Faster monitor task for quick updates
         self.monitor_timer.daemon = True
         self.monitor_timer.start()
 
+    def start_discovery_timer(self):
+        """Starts the IP discovery timer."""
+        if not self.running:
+            return
+        if self.discovery_timer:
+            self.discovery_timer.cancel()
+        self.discovery_timer = threading.Timer(self.discovery_interval, self.discover_remote_ip_task)
+        self.discovery_timer.daemon = True
+        self.discovery_timer.start()
+
     def send_heartbeat_task(self):
-        """发送心跳任务"""
+        """Sends heartbeat task."""
         if not self.running:
             return
 
@@ -161,96 +194,115 @@ class HotStandby(QObject):
                 'timestamp': time.time(),
                 'ip': self.local_ip
             }
-
             data = json.dumps(heartbeat_data).encode('utf-8')
-            self.udp_socket.sendto(data, (self.remote_ip, self.heartbeat_port))
+
+            # Send heartbeat to the currently known remote IP, or broadcast if none
+            if self.remote_ip:
+                self.udp_socket.sendto(data, (self.remote_ip, self.heartbeat_port))
+            else:
+                # If remote_ip is unknown, send to broadcast address (e.g., 192.168.1.255)
+                # This assumes a /24 subnet for 192.168.1.x
+                broadcast_ip = str(ipaddress.IPv4Network(f'{self.local_ip}/24', strict=False).broadcast_address)
+                self.udp_socket.sendto(data, (broadcast_ip, self.heartbeat_port))
 
         except Exception as e:
             if self.running:
                 print(f"发送心跳失败: {str(e)}")
 
-        # 重新启动定时器
-        self.start_heartbeat_timer()
+        self.start_heartbeat_timer() # Restart timer
 
     def monitor_task(self):
-        """监控状态任务"""
+        """Monitors status task."""
         if not self.running:
             return
 
         try:
-            # 检查心跳超时
-            if self.last_heartbeat_time:
+            # Check for heartbeat timeout
+            if self.remote_ip and self.last_heartbeat_time:
                 time_diff = (datetime.datetime.now() - self.last_heartbeat_time).total_seconds()
                 if time_diff > self.timeout_threshold:
                     if self.remote_status != HeartbeatStatus.OFFLINE:
                         self.remote_status = HeartbeatStatus.OFFLINE
                         self.remote_role = MachineRole.BACKUP
+                        print("对方心跳超时，标记为离线")
 
-                        # 如果本机是备机且对方离线，升级为主机
+                        # If local is backup and remote is offline, promote to master
                         if self.local_role == MachineRole.BACKUP:
                             self.local_role = MachineRole.MASTER
-                            print("检测到主机离线，备机自动升级为主机")
+                            print("检测到对方离线，本机自动升级为主机")
+            elif self.remote_ip is None: # If no remote IP is known, assume local is master
+                if self.local_role == MachineRole.BACKUP:
+                    self.local_role = MachineRole.MASTER
+                    print("未检测到对方机器，本机自动成为主机")
 
-                        print("对方心跳超时，标记为离线")
         except Exception as e:
             if self.running:
                 print(f"状态监控错误: {str(e)}")
 
-        # 重新启动定时器
-        self.start_monitor_timer()
+        self.start_monitor_timer() # Restart timer
         self.update_status()
 
     def determine_initial_role(self):
-        """确定初始角色"""
+        """
+        Determines the initial role based on whether a remote machine is detected
+        and then by IP comparison. This runs very quickly after discovering the remote.
+        """
+        if not self.running:
+            return
 
-        # 使用定时器替代 sleep
-        def initial_role_check():
-            if not self.running:
-                return
+        if self.remote_status == HeartbeatStatus.OFFLINE or self.remote_ip is None:
+            # If no remote machine is detected, or it's offline, this machine becomes master
+            self.local_role = MachineRole.MASTER
+            self.remote_role = MachineRole.BACKUP
+            print("未检测到对方机器或对方离线，本机自动成为主机")
+        else:
+            # If a remote machine is online, compare IPs
+            try:
+                local_ip_int = int(ipaddress.ip_address(self.local_ip))
+                remote_ip_int = int(ipaddress.ip_address(self.remote_ip))
 
-            if self.remote_status == HeartbeatStatus.OFFLINE:
-                # 对方不在线，自己成为主机
-                self.local_role = MachineRole.MASTER
-                self.remote_role = MachineRole.BACKUP
-                print("对方离线，本机自动成为主机")
-            else:
-                # 对方在线，比较IP地址
-                try:
-                    local_ip_int = int(ipaddress.ip_address(self.local_ip))
-                    remote_ip_int = int(ipaddress.ip_address(self.remote_ip))
-
-                    if local_ip_int < remote_ip_int:
-                        self.local_role = MachineRole.MASTER
-                        self.remote_role = MachineRole.BACKUP
-                        print(f"IP比较：本机({self.local_ip}) < 对方({self.remote_ip})，本机成为主机")
-                    else:
-                        self.local_role = MachineRole.BACKUP
-                        self.remote_role = MachineRole.MASTER
-                        print(f"IP比较：本机({self.local_ip}) > 对方({self.remote_ip})，本机成为备机")
-                except:
+                if local_ip_int < remote_ip_int:
+                    self.local_role = MachineRole.MASTER
+                    self.remote_role = MachineRole.BACKUP
+                    print(f"IP比较：本机({self.local_ip}) < 对方({self.remote_ip})，本机成为主机")
+                else:
                     self.local_role = MachineRole.BACKUP
-                    print("IP比较失败，本机默认成为备机")
-            self.update_status()
-
-        # 设置3秒后执行初始角色判断
-        threading.Timer(3.0, initial_role_check).start()
+                    self.remote_role = MachineRole.MASTER
+                    print(f"IP比较：本机({self.local_ip}) > 对方({self.remote_ip})，本机成为备机")
+            except Exception:
+                # Fallback in case of IP comparison error (shouldn't happen with valid IPs)
+                self.local_role = MachineRole.BACKUP
+                print("IP比较失败，本机默认成为备机")
+        self.update_status()
 
     def listen_heartbeat(self):
-        """监听心跳包"""
+        """Listens for heartbeat packets."""
         while self.running and not self.stop_event.is_set():
             try:
                 data, addr = self.udp_socket.recvfrom(1024)
+                sender_ip = addr[0]
 
-                if addr[0] == self.remote_ip:
+                if sender_ip == self.local_ip: # Ignore own heartbeats
+                    continue
+
+                # Only process heartbeats from 192.168.1.x range and not own IP
+                if sender_ip.startswith('192.168.1.') and sender_ip != self.local_ip:
                     try:
                         heartbeat_data = json.loads(data.decode('utf-8'))
 
                         if heartbeat_data.get('type') == 'heartbeat':
+                            # If a remote IP is not yet set, or it changed, update it
+                            if self.remote_ip is None or self.remote_ip != sender_ip:
+                                print(f"发现对方机器IP: {sender_ip}")
+                                self.remote_ip = sender_ip
+                                # Immediately determine role upon discovering the other machine
+                                self.determine_initial_role()
+
                             self.last_heartbeat_time = datetime.datetime.now()
                             self.heartbeat_received = True
                             self.remote_status = HeartbeatStatus.ONLINE
 
-                            # 更新对方角色
+                            # Update remote role
                             remote_role_name = heartbeat_data.get('role', 'BACKUP')
                             if remote_role_name == 'MASTER':
                                 self.remote_role = MachineRole.MASTER
@@ -259,16 +311,14 @@ class HotStandby(QObject):
                             else:
                                 self.remote_role = MachineRole.BACKUP
 
-                            # 检查双主机情况
+                            # Check for dual master situation
                             self.check_dual_master()
-
 
                         elif heartbeat_data.get('type') == 'demotion_notification':
                             self.handle_demotion_notification(heartbeat_data)
 
                     except json.JSONDecodeError:
-                        pass
-
+                        pass # Ignore malformed JSON
             except socket.timeout:
                 continue
             except Exception as e:
@@ -276,52 +326,66 @@ class HotStandby(QObject):
                     print(f"监听心跳失败: {str(e)}")
             self.update_status()
 
+    def discover_remote_ip_task(self):
+        """
+        Task to actively discover remote IP by sending broadcast heartbeats.
+        This helps when a remote machine comes online or changes IP.
+        """
+        if not self.running:
+            return
+
+        if self.remote_ip is None or self.remote_status == HeartbeatStatus.OFFLINE:
+            # Send a broadcast heartbeat to try and discover the other machine
+            print("正在扫描局域网以发现对方机器...")
+            self.send_heartbeat_task() # This function now also handles broadcast
+
+        self.start_discovery_timer() # Reschedule for continuous discovery
+
     def check_dual_master(self):
-        """检查并解决双主机情况"""
+        """Checks and resolves dual master situations."""
         if (self.local_role == MachineRole.MASTER and
                 self.remote_role == MachineRole.MASTER and
                 self.remote_status == HeartbeatStatus.ONLINE):
 
-            # 首次检测到双主机
+            # First time dual master is detected
             if self.dual_master_check_time is None:
                 self.dual_master_check_time = time.time()
                 print("警告：检测到双主机状态！开始解决程序...")
                 return
 
-            # 等待一段时间后执行解决方案
+            # Execute resolution after delay
             if time.time() - self.dual_master_check_time >= self.dual_master_resolve_delay:
                 self.resolve_dual_master()
         else:
-            # 重置双主机检测时间
+            # Reset dual master check time
             if self.dual_master_check_time is not None:
                 self.dual_master_check_time = None
         self.update_status()
 
     def resolve_dual_master(self):
-        """解决双主机冲突：IP大的降为备机"""
+        """Resolves dual master conflict: higher IP becomes backup."""
         try:
             local_ip_int = int(ipaddress.ip_address(self.local_ip))
             remote_ip_int = int(ipaddress.ip_address(self.remote_ip))
 
             if local_ip_int > remote_ip_int:
-                # 本机IP较大，降级为备机
+                # Local IP is larger, demote to back up
                 self.local_role = MachineRole.BACKUP
                 self.remote_role = MachineRole.MASTER
                 print(f"双主机冲突解决：本机IP({self.local_ip}) > 对方IP({self.remote_ip})，本机降级为备机")
-
-                # 发送降级通知
                 self.send_demotion_notification()
 
             elif local_ip_int < remote_ip_int:
-                # 本机IP较小，保持主机状态，等待对方降级
+                # Local IP is smaller, remain master, wait for other to demote
                 print(f"双主机冲突解决：本机IP({self.local_ip}) < 对方IP({self.remote_ip})，本机保持主机状态")
             else:
-                # IP相同的情况（理论上不应该发生）
+                # IPs are the same (should be rare/impossible in a properly configured network)
                 print("警告：检测到相同IP地址，使用随机方式解决冲突")
                 import random
                 if random.choice([True, False]):
                     self.local_role = MachineRole.BACKUP
                     print("随机选择：本机降级为备机")
+                    self.send_demotion_notification()
 
             self.dual_master_check_time = None
 
@@ -331,7 +395,7 @@ class HotStandby(QObject):
         self.update_status()
 
     def send_demotion_notification(self):
-        """发送降级通知"""
+        """Sends demotion notification."""
         try:
             notification_data = {
                 'type': 'demotion_notification',
@@ -339,17 +403,32 @@ class HotStandby(QObject):
                 'timestamp': time.time(),
                 'from_ip': self.local_ip
             }
-
             data = json.dumps(notification_data).encode('utf-8')
-            self.udp_socket.sendto(data, (self.remote_ip, self.heartbeat_port))
+            # Send directly to the remote IP if known, otherwise broadcast
+            if self.remote_ip:
+                self.udp_socket.sendto(data, (self.remote_ip, self.heartbeat_port))
+            else:
+                broadcast_ip = str(ipaddress.IPv4Network(f'{self.local_ip}/24', strict=False).broadcast_address)
+                self.udp_socket.sendto(data, (broadcast_ip, self.heartbeat_port))
 
         except Exception as e:
             print(f"发送降级通知失败: {str(e)}")
 
     def handle_demotion_notification(self, notification_data):
-        """处理降级通知"""
+        """Handles demotion notification."""
         if notification_data.get('message') == 'dual_master_resolved':
             print("收到对方降级通知，双主机冲突已解决")
-            # 重置双主机检测时间
+            # Reset dual master check time
             self.dual_master_check_time = None
+            if self.local_role == MachineRole.MASTER:
+                # If we were still master, and they sent a demotion, means they are now backup
+                # We should stay master if our IP is smaller, or if their IP is bigger, and they demoted
+                # This logic is key to ensure correct state after a resolution.
+                if int(ipaddress.ip_address(self.local_ip)) > int(ipaddress.ip_address(notification_data.get('from_ip'))):
+                    # Our IP is larger, and they demoted, so we should also demote if we are still master
+                    self.local_role = MachineRole.BACKUP
+                    print("根据对方降级通知，本机降级为备机")
+                else:
+                    print("根据对方降级通知，本机保持主机状态")
+
         self.update_status()
