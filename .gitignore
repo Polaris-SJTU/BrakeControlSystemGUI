@@ -125,3 +125,5 @@ dmypy.json
 
 build
 .idea
+*.exe
+logs
