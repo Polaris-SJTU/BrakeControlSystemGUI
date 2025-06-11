@@ -1,5 +1,8 @@
+from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow
+
 from modules.hot_standby import HotStandby, MachineRole, HeartbeatStatus
+from modules.logger import Logger
 from uis.brake_control_system import Ui_Form
 
 
@@ -14,11 +17,26 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         self.update_machine_id()
 
         # 双机热备模块
-        self.current_role = MachineRole.BACKUP
-        self.remote_role = MachineRole.BACKUP
-        self.remote_status = HeartbeatStatus.OFFLINE
+        self.local_role = None
+        self.local_status = None
+        self.remote_role = None
+        self.remote_status = None
         self.hot_standby = HotStandby(machine_id)
         self.hot_standby.status_updated.connect(self.update_hot_standby_status)
+
+        # 日志模块
+        self.logger = Logger()
+        self.BTN_search.clicked.connect(self.show_log_window)
+
+        self.logger.log(f"{self.machine_id}机启动")
+
+    @pyqtSlot()
+    def show_log_window(self):
+        self.logger.show()
+
+    @pyqtSlot()
+    def close_log_window(self):
+        self.logger.close()
 
     def update_machine_id(self):
         """更新设备ID"""
@@ -31,18 +49,30 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
 
     def update_hot_standby_status(self, status_data):
         """更新双机热备状态"""
-        self.current_role = status_data['local_role']
-        self.remote_role = status_data['remote_role']
-        self.remote_status = status_data['remote_status']
+        if self.local_role != status_data['local_role']:
+            self.local_role = status_data['local_role']
+            self.logger.log(f"{self.machine_id}机进入{self.local_role.value}状态")
+
+        if self.local_status != status_data['local_status']:
+            self.local_status = status_data['local_status']
+            self.logger.log(f"{self.machine_id}机{self.local_status.value}")
+
+        if self.remote_role != status_data['remote_role']:
+            self.remote_role = status_data['remote_role']
+            self.logger.log(f"{'B' if self.machine_id == 'A' else 'A'}机进入{self.remote_role.value}状态")
+
+        if self.remote_status != status_data['remote_status']:
+            self.remote_status = status_data['remote_status']
+            self.logger.log(f"{'B' if self.machine_id == 'A' else 'A'}机{self.remote_status.value}")
 
         # 锁定/解锁按钮
-        if self.current_role == MachineRole.BACKUP:
+        if self.local_role == MachineRole.BACKUP or self.local_status == HeartbeatStatus.OFFLINE:
             self.lock_all_buttons()
         else:
             self.unlock_all_buttons()
 
         if self.machine_id == "A":
-            self.label_serverA_state.setText(f"{self.current_role.value}")
+            self.label_serverA_state.setText(f"{self.local_role.value}")
             self.label_serverA_state.setStyleSheet(
                 f"font-size: 12;"
                 f"font-family: 'Microsoft YaHei';"
@@ -70,7 +100,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                 f"color: {'rgb(0, 255, 0)' if self.remote_status == HeartbeatStatus.ONLINE else 'rgb(255, 0, 0)'};"
                 f"border: 2px solid gray;"
             )
-            self.label_serverB_state.setText(f"{self.current_role.value}")
+            self.label_serverB_state.setText(f"{self.local_role.value}")
             self.label_serverB_state.setStyleSheet(
                 f"font-size: 12;"
                 f"font-family: 'Microsoft YaHei';"
@@ -107,3 +137,14 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         for name in ["BTN_brake", "BTN_release"]:
             button = getattr(self, name, None)
             button.setEnabled(True)
+
+    def closeEvent(self, event):
+        """程序退出事件"""
+        self.logger.close()
+        self.hot_standby.stop_service()
+
+        # 删除窗口资源
+        self.logger.window.deleteLater()
+        self.logger.deleteLater()
+
+        super().closeEvent(event)

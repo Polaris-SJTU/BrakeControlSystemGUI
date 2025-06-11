@@ -5,6 +5,7 @@ import socket
 import threading
 import time
 from enum import Enum
+
 from PyQt5.QtCore import QObject, pyqtSignal
 
 
@@ -33,7 +34,8 @@ class HotStandby(QObject):
         self.timeout_threshold = 2  # 超时阈值秒数
 
         # 状态变量
-        self.current_role = MachineRole.BACKUP
+        self.local_role = MachineRole.BACKUP
+        self.local_status = HeartbeatStatus.OFFLINE
         self.remote_role = MachineRole.BACKUP
         self.remote_status = HeartbeatStatus.OFFLINE
         self.last_heartbeat_time = None
@@ -56,7 +58,8 @@ class HotStandby(QObject):
     def update_status(self):
         """更新设备状态"""
         status_data = {
-            'local_role': self.current_role,
+            'local_role': self.local_role,
+            'local_status': self.local_status,
             'remote_role': self.remote_role,
             'remote_status': self.remote_status
         }
@@ -76,6 +79,8 @@ class HotStandby(QObject):
             # 启动监听线程
             self.listen_thread = threading.Thread(target=self.listen_heartbeat, daemon=True)
             self.listen_thread.start()
+
+            self.local_status = HeartbeatStatus.ONLINE
 
             print(f"服务已启动，本机IP: {self.local_ip}, 对方IP: {self.remote_ip}, 端口: {self.heartbeat_port}")
 
@@ -110,7 +115,8 @@ class HotStandby(QObject):
             self.udp_socket = None
 
         # 重置状态
-        self.current_role = MachineRole.BACKUP
+        self.local_role = MachineRole.BACKUP
+        self.local_status = HeartbeatStatus.OFFLINE
         self.remote_role = MachineRole.BACKUP
         self.remote_status = HeartbeatStatus.OFFLINE
         self.last_heartbeat_time = None
@@ -151,7 +157,7 @@ class HotStandby(QObject):
         try:
             heartbeat_data = {
                 'type': 'heartbeat',
-                'role': self.current_role.name,
+                'role': self.local_role.name,
                 'timestamp': time.time(),
                 'ip': self.local_ip
             }
@@ -181,8 +187,8 @@ class HotStandby(QObject):
                         self.remote_role = MachineRole.BACKUP
 
                         # 如果本机是备机且对方离线，升级为主机
-                        if self.current_role == MachineRole.BACKUP:
-                            self.current_role = MachineRole.MASTER
+                        if self.local_role == MachineRole.BACKUP:
+                            self.local_role = MachineRole.MASTER
                             print("检测到主机离线，备机自动升级为主机")
 
                         print("对方心跳超时，标记为离线")
@@ -204,7 +210,7 @@ class HotStandby(QObject):
 
             if self.remote_status == HeartbeatStatus.OFFLINE:
                 # 对方不在线，自己成为主机
-                self.current_role = MachineRole.MASTER
+                self.local_role = MachineRole.MASTER
                 self.remote_role = MachineRole.BACKUP
                 print("对方离线，本机自动成为主机")
             else:
@@ -214,15 +220,15 @@ class HotStandby(QObject):
                     remote_ip_int = int(ipaddress.ip_address(self.remote_ip))
 
                     if local_ip_int < remote_ip_int:
-                        self.current_role = MachineRole.MASTER
+                        self.local_role = MachineRole.MASTER
                         self.remote_role = MachineRole.BACKUP
                         print(f"IP比较：本机({self.local_ip}) < 对方({self.remote_ip})，本机成为主机")
                     else:
-                        self.current_role = MachineRole.BACKUP
+                        self.local_role = MachineRole.BACKUP
                         self.remote_role = MachineRole.MASTER
                         print(f"IP比较：本机({self.local_ip}) > 对方({self.remote_ip})，本机成为备机")
                 except:
-                    self.current_role = MachineRole.BACKUP
+                    self.local_role = MachineRole.BACKUP
                     print("IP比较失败，本机默认成为备机")
             self.update_status()
 
@@ -272,7 +278,7 @@ class HotStandby(QObject):
 
     def check_dual_master(self):
         """检查并解决双主机情况"""
-        if (self.current_role == MachineRole.MASTER and
+        if (self.local_role == MachineRole.MASTER and
                 self.remote_role == MachineRole.MASTER and
                 self.remote_status == HeartbeatStatus.ONLINE):
 
@@ -299,7 +305,7 @@ class HotStandby(QObject):
 
             if local_ip_int > remote_ip_int:
                 # 本机IP较大，降级为备机
-                self.current_role = MachineRole.BACKUP
+                self.local_role = MachineRole.BACKUP
                 self.remote_role = MachineRole.MASTER
                 print(f"双主机冲突解决：本机IP({self.local_ip}) > 对方IP({self.remote_ip})，本机降级为备机")
 
@@ -314,7 +320,7 @@ class HotStandby(QObject):
                 print("警告：检测到相同IP地址，使用随机方式解决冲突")
                 import random
                 if random.choice([True, False]):
-                    self.current_role = MachineRole.BACKUP
+                    self.local_role = MachineRole.BACKUP
                     print("随机选择：本机降级为备机")
 
             self.dual_master_check_time = None
@@ -347,8 +353,3 @@ class HotStandby(QObject):
             # 重置双主机检测时间
             self.dual_master_check_time = None
         self.update_status()
-
-    def __del__(self):
-        """程序关闭时的处理"""
-        if self.running:
-            self.stop_service()

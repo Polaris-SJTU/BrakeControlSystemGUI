@@ -70,7 +70,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "自动控制"))
         self.label.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">确定要修改为自动控制？</span></p></body></html>"))
         self.pushButton.setText(_translate("Form", "确定"))
         self.pushButton_2.setText(_translate("Form", "取消"))

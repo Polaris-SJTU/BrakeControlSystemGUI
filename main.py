@@ -1,5 +1,7 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication
+
 from modules.gui import BrakeControlSystemGUI
 
 if __name__ == "__main__":

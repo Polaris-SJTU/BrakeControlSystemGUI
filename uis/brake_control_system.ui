@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>通辽站下行编尾停车防溜器控制系统</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
