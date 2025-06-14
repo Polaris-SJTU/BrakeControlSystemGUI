@@ -392,17 +392,59 @@ background-color: rgb(180, 197, 231);</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -530,17 +572,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -583,17 +667,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -687,17 +813,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -791,17 +959,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -844,17 +1054,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -896,11 +1148,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -943,17 +1219,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -996,17 +1314,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1048,11 +1408,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -1095,17 +1479,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1198,11 +1624,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -1245,17 +1695,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1297,11 +1789,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -1344,17 +1860,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1396,11 +1954,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -1443,17 +2025,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1496,17 +2120,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1549,17 +2215,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1602,17 +2310,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1654,11 +2404,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -1701,17 +2475,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1753,11 +2569,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -1800,17 +2640,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1853,17 +2735,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1906,17 +2830,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -1959,17 +2925,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2012,17 +3020,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2064,11 +3114,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -2111,17 +3185,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2265,11 +3381,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -2312,17 +3452,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2364,11 +3546,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -2411,17 +3617,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2463,11 +3711,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -2509,18 +3781,63 @@ QPushButton:pressed {
      <bold>true</bold>
     </font>
    </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2614,17 +3931,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2667,17 +4026,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2720,17 +4121,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2772,11 +4215,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -2819,17 +4286,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2923,17 +4432,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -2976,17 +4527,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3029,17 +4622,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3082,17 +4717,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3135,17 +4812,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3188,17 +4907,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3241,17 +5002,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3294,17 +5097,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3398,17 +5243,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3502,17 +5389,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3605,11 +5534,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -3652,17 +5605,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3704,11 +5699,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -3751,17 +5770,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3855,17 +5916,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -3907,11 +6010,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -4005,17 +6132,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4058,17 +6227,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4110,11 +6321,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -4157,17 +6392,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4210,17 +6487,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4263,17 +6582,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4316,17 +6677,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4369,17 +6772,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4422,17 +6867,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4475,17 +6962,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4629,11 +7158,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -4676,17 +7229,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4729,17 +7324,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4781,11 +7418,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -4828,17 +7489,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4880,11 +7583,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -4927,17 +7654,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -4979,11 +7748,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -5026,17 +7819,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5079,17 +7914,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5132,17 +8009,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5184,11 +8103,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -5384,17 +8327,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5488,17 +8473,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5540,11 +8567,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -5587,17 +8638,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5640,17 +8733,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5795,17 +8930,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5848,17 +9025,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5901,17 +9120,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -5954,17 +9215,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -6007,17 +9310,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -6060,17 +9405,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -6113,17 +9500,59 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">/* 正常状态 */
-QPushButton {
-    border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
-	color:rgb(255, 255, 255);
+    <string notr="true">QPushButton {
+	background-color: rgb(200, 200, 200);
+    border-radius: 0px;
+	color: rgb(255, 255, 255);
 }
 
-/* 按下状态（保持不透明） */
-QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
-    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+QPushButton[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;] {
+    background-color: rgb(200, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;brake&quot;]:checked {
+    background-color: rgb(100, 0, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(200, 255, 200, 255),
+		stop:0.5 rgba(0, 200, 0, 255),
+		stop:1 rgba(200, 255, 200, 255));
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    background-color: rgb(0, 100, 0);
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+		stop:0 rgba(255, 200, 200, 255),
+		stop:0.5 rgba(200, 0, 0, 255),
+		stop:1 rgba(255, 200, 200, 255));
+	border-radius: 0px;
+	border-radius: 0px;
+	color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
@@ -6165,11 +9594,35 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
+    border-image: url(:/images/gray_btn.png);
+}
+
+QPushButton[state=&quot;brake&quot;] {
     border-image: url(:/images/red_btn.png);
 }
 
-QPushButton:pressed {
+QPushButton[state=&quot;brake&quot;]:checked {
     border-image: url(:/images/red_btn_pressed.png);
+}
+
+QPushButton[state=&quot;release&quot;] {
+    border-image: url(:/images/green_btn.png);
+}
+
+QPushButton[state=&quot;release&quot;]:checked {
+    border-image: url(:/images/green_btn_pressed.png);
+}
+
+QPushButton[state=&quot;maintain&quot;] {
+    border-image: url(:/images/yellow_btn.png);
+}
+
+QPushButton[state=&quot;releasing&quot;] {
+    border-image: url(:/images/red_gradient_btn.png);
+}
+
+QPushButton[state=&quot;braking&quot;] {
+    border-image: url(:/images/green_gradient_btn.png);
 }</string>
    </property>
    <property name="text">
@@ -8403,7 +11856,7 @@ background-color: rgb(180, 197, 231);</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_2">
+  <widget class="QLabel" name="label_anti_slip_2">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -8431,13 +11884,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_3">
+  <widget class="QLabel" name="label_anti_slip_3">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -8465,13 +11928,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_4">
+  <widget class="QLabel" name="label_anti_slip_4">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -8499,13 +11972,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_5">
+  <widget class="QLabel" name="label_anti_slip_5">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -8533,13 +12016,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_8">
+  <widget class="QLabel" name="label_anti_slip_8">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -8567,13 +12060,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_6">
+  <widget class="QLabel" name="label_anti_slip_6">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -8601,13 +12104,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_7">
+  <widget class="QLabel" name="label_anti_slip_7">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -8635,13 +12148,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_9">
+  <widget class="QLabel" name="label_anti_slip_9">
    <property name="geometry">
     <rect>
      <x>831</x>
@@ -8669,13 +12192,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_12">
+  <widget class="QLabel" name="label_anti_slip_12">
    <property name="geometry">
     <rect>
      <x>925</x>
@@ -8703,13 +12236,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_14">
+  <widget class="QLabel" name="label_anti_slip_14">
    <property name="geometry">
     <rect>
      <x>927</x>
@@ -8737,13 +12280,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_10">
+  <widget class="QLabel" name="label_anti_slip_10">
    <property name="geometry">
     <rect>
      <x>927</x>
@@ -8771,13 +12324,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_11">
+  <widget class="QLabel" name="label_anti_slip_11">
    <property name="geometry">
     <rect>
      <x>831</x>
@@ -8805,13 +12368,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_13">
+  <widget class="QLabel" name="label_anti_slip_13">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -8839,13 +12412,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_16">
+  <widget class="QLabel" name="label_anti_slip_16">
    <property name="geometry">
     <rect>
      <x>925</x>
@@ -8873,13 +12456,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_15">
+  <widget class="QLabel" name="label_anti_slip_15">
    <property name="geometry">
     <rect>
      <x>831</x>
@@ -8907,13 +12500,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_17">
+  <widget class="QLabel" name="label_anti_slip_17">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -8941,13 +12544,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_20">
+  <widget class="QLabel" name="label_anti_slip_20">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -8975,13 +12588,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_22">
+  <widget class="QLabel" name="label_anti_slip_22">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -9009,13 +12632,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_18">
+  <widget class="QLabel" name="label_anti_slip_18">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -9043,13 +12676,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_19">
+  <widget class="QLabel" name="label_anti_slip_19">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -9077,13 +12720,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_21">
+  <widget class="QLabel" name="label_anti_slip_21">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -9111,13 +12764,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_24">
+  <widget class="QLabel" name="label_anti_slip_24">
    <property name="geometry">
     <rect>
      <x>926</x>
@@ -9145,13 +12808,23 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_antirolling_23">
+  <widget class="QLabel" name="label_anti_slip_23">
    <property name="geometry">
     <rect>
      <x>830</x>
@@ -9179,7 +12852,17 @@ background-color: rgb(180, 197, 231);</string>
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 255, 0);</string>
+    <string notr="true">QLabel {
+    background-color: rgb(200, 200, 200);
+}
+
+QLabel[state=&quot;release&quot;] {
+    background-color: rgb(0, 200, 0);
+}
+
+QLabel[state=&quot;maintain&quot;] {
+    background-color: rgb(200, 200, 0);
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -9937,13 +13620,13 @@ border: 2px solid gray;
          <string notr="true">/* 正常状态 */
 QPushButton {
     border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(255, 0, 0); /* 红色背景 */
+    background-color: rgb(200, 0, 0); /* 红色背景 */
 	color:rgb(255, 255, 255);
 }
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(200, 0, 0); /* 按下时变暗，但不透明 */
+    background-color: rgb(100, 0, 0); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 	color:rgb(255, 255, 255);
 }</string>
@@ -10001,13 +13684,13 @@ QPushButton:pressed {
          <string notr="true">/* 正常状态 */
 QPushButton {
     border-radius: 0px;             /* 直角矩形 */
-    background-color: rgb(0, 255, 0); /* 红色背景 */
+    background-color: rgb(0, 200, 0); /* 红色背景 */
 	color:rgb(255, 255, 255);
 }
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(0, 200, 0); /* 按下时变暗，但不透明 */
+    background-color: rgb(0, 100, 0); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 	color:rgb(255, 255, 255);
 }</string>
@@ -10212,29 +13895,29 @@ QPushButton:pressed {
   <zorder>label_74</zorder>
   <zorder>label_8</zorder>
   <zorder>label_9</zorder>
-  <zorder>label_antirolling_2</zorder>
-  <zorder>label_antirolling_3</zorder>
-  <zorder>label_antirolling_4</zorder>
-  <zorder>label_antirolling_5</zorder>
-  <zorder>label_antirolling_8</zorder>
-  <zorder>label_antirolling_6</zorder>
-  <zorder>label_antirolling_7</zorder>
-  <zorder>label_antirolling_9</zorder>
-  <zorder>label_antirolling_12</zorder>
-  <zorder>label_antirolling_14</zorder>
-  <zorder>label_antirolling_10</zorder>
-  <zorder>label_antirolling_11</zorder>
-  <zorder>label_antirolling_13</zorder>
-  <zorder>label_antirolling_16</zorder>
-  <zorder>label_antirolling_15</zorder>
-  <zorder>label_antirolling_17</zorder>
-  <zorder>label_antirolling_20</zorder>
-  <zorder>label_antirolling_22</zorder>
-  <zorder>label_antirolling_18</zorder>
-  <zorder>label_antirolling_19</zorder>
-  <zorder>label_antirolling_21</zorder>
-  <zorder>label_antirolling_24</zorder>
-  <zorder>label_antirolling_23</zorder>
+  <zorder>label_anti_slip_2</zorder>
+  <zorder>label_anti_slip_3</zorder>
+  <zorder>label_anti_slip_4</zorder>
+  <zorder>label_anti_slip_5</zorder>
+  <zorder>label_anti_slip_8</zorder>
+  <zorder>label_anti_slip_6</zorder>
+  <zorder>label_anti_slip_7</zorder>
+  <zorder>label_anti_slip_9</zorder>
+  <zorder>label_anti_slip_12</zorder>
+  <zorder>label_anti_slip_14</zorder>
+  <zorder>label_anti_slip_10</zorder>
+  <zorder>label_anti_slip_11</zorder>
+  <zorder>label_anti_slip_13</zorder>
+  <zorder>label_anti_slip_16</zorder>
+  <zorder>label_anti_slip_15</zorder>
+  <zorder>label_anti_slip_17</zorder>
+  <zorder>label_anti_slip_20</zorder>
+  <zorder>label_anti_slip_22</zorder>
+  <zorder>label_anti_slip_18</zorder>
+  <zorder>label_anti_slip_19</zorder>
+  <zorder>label_anti_slip_21</zorder>
+  <zorder>label_anti_slip_24</zorder>
+  <zorder>label_anti_slip_23</zorder>
   <zorder>frame</zorder>
   <zorder>frame_2</zorder>
   <zorder>label_5</zorder>
