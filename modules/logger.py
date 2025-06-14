@@ -55,6 +55,10 @@ class Logger(QObject):
             self.ui.textBrowser.verticalScrollBar().maximum()
         )
 
+        self.ui.textBrowser.verticalScrollBar().setValue(
+            self.ui.textBrowser.verticalScrollBar().maximum()
+        )
+
     def _get_log_file_path(self):
         """返回当天日志文件的完整路径"""
         today = datetime.date.today().strftime("%Y-%m-%d")
@@ -75,13 +79,13 @@ class Logger(QObject):
             self.ui.textBrowser.verticalScrollBar().maximum()
         )
 
+        self.ui.textBrowser.verticalScrollBar().setValue(
+            self.ui.textBrowser.verticalScrollBar().maximum()
+        )
+
         # 写入文件
         with open(self._get_log_file_path(), "a", encoding="utf-8") as f:
             f.write(full_msg + "\n")
-
-    def log(self, msg: str):
-        """外部调用接口：发出日志记录信号"""
-        self.log_signal.emit(msg)
 
     def show(self):
         """显示日志窗口"""
