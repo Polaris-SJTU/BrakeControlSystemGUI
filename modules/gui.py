@@ -426,45 +426,42 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             button.style().polish(button)
         else:
             label = getattr(self, f"label_anti_slip_{track_id}")
-            if state >= AntiSlipState.WARNING_NOT_IN_PLACE or state == AntiSlipState.STATE_INIT or state == AntiSlipState.STATE_PUSH_AWAY:
+            io_state_low = self.track_statuses[track_id][function][device_id]["IO_8_1"]
+            push_away_deputy1 = (io_state_low & 0b00001000) == 0
+            push_away_deputy2 = (io_state_low & 0b00010000) == 0
+            if state >= AntiSlipState.WARNING_NOT_IN_PLACE or state in [AntiSlipState.STATE_INIT, AntiSlipState.STATE_PUSH_AWAY] or push_away_deputy1 or push_away_deputy2:
                 button.setProperty("state", "error")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "error")
             elif mode == "LOCAL_CONTROL":
                 button.setProperty("state", "maintain")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "maintain")
             elif state == AntiSlipState.STATE_BRAKING_REMOTE:
                 button.setProperty("state", "braking")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "release")
             elif state == AntiSlipState.STATE_RELEASING_REMOTE:
                 button.setProperty("state", "releasing")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "release")
             elif state == AntiSlipState.STATE_STOP_AT_BRAKE_REMOTE:
                 button.setProperty("state", "brake")
                 button.setCheckable(True)
                 button.setEnabled(True)
+                label.setProperty("state", "release")
             elif state == AntiSlipState.STATE_STOP_AT_RELEASE_REMOTE:
                 button.setProperty("state", "release")
                 button.setCheckable(True)
                 button.setEnabled(True)
+                label.setProperty("state", "release")
             button.style().unpolish(button)
             button.style().polish(button)
             button.update()
-
-            io_state_low = self.track_statuses[track_id][function][device_id]["IO_8_1"]
-            push_away_deputy1 = (io_state_low & 0b00001000) == 0
-            push_away_deputy2 = (io_state_low & 0b00010000) == 0
-            if state >= AntiSlipState.WARNING_NOT_IN_PLACE or state == AntiSlipState.STATE_INIT:
-                label.setProperty("state", "error")
-            elif mode == "LOCAL_CONTROL":
-                label.setProperty("state", "maintain")
-            elif push_away_deputy1 or push_away_deputy2:
-                label.setProperty("state", "error")
-            else:
-                label.setProperty("state", "release")
             label.style().unpolish(label)
             label.style().polish(label)
 
