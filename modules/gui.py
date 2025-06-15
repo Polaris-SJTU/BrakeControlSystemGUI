@@ -15,7 +15,7 @@ class StopperState(enum.IntEnum):
     STATE_STOP_AT_BRAKE = 2,
     STATE_STOP_AT_RELEASE = 3,
     STATE_MAINTAIN = 4,
-    ERROR_BEGIN = 100
+    ERROR_VALVE_ANOMALY = 100
 
 
 stopper_state_map = {
@@ -23,6 +23,7 @@ stopper_state_map = {
     StopperState.STATE_STOP_AT_BRAKE: "处于制动状态",
     StopperState.STATE_STOP_AT_RELEASE: "处于缓解状态",
     StopperState.STATE_MAINTAIN: "处于检修状态",
+    StopperState.ERROR_VALVE_ANOMALY: "无指令电磁阀异动"
 }
 
 
@@ -104,6 +105,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
 
         # 设置设备状态
         self.track_statuses = {}
+        self.tcp_clients = {}
         self._initialize_track_statuses()
 
         self.timer = QTimer(self)
@@ -157,7 +159,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                 "TRACK": 0,
                 "CMD": "QUERY"
             }
-            self.track_statuses[track_id]["TCP_CLIENT"].send_downlink_command.emit(query_command)
+            self.tcp_clients[track_id].send_downlink_command.emit(query_command)
 
     def _initialize_last_report_time(self):
         for track_id in range(2, 2 + 23):
@@ -196,9 +198,9 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                         "IO_16_9": 0xFF,
                         "IO_8_1": 0xFF
                     }
-                },
-                "TCP_CLIENT": DownlinkTcpClient(self.downlink_host, port)
+                }
             }
+            self.tcp_clients[track_id] = DownlinkTcpClient(self.downlink_host, port)
             for device_id in range(1, 3):
                 self.update_device_button(track_id, "STOPPER", device_id)
                 button = getattr(self, f"BTN{track_id}_{device_id}")
@@ -208,7 +210,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             button.clicked.connect(self.create_device_handler(track_id, "ANTI_SLIP", 1))
             button = getattr(self, f"BTN{track_id}_{5}")
             button.clicked.connect(self.create_track_handler(track_id))
-            self.track_statuses[track_id]["TCP_CLIENT"].parsed_uplink_packet.connect(self._update_device_status)
+            self.tcp_clients[track_id].parsed_uplink_packet.connect(self._update_device_status)
 
             self.BTN_brake.clicked.connect(self.send_brake_command)
             self.BTN_release.clicked.connect(self.send_release_command)
@@ -233,7 +235,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                     "TRACK": track_id,
                     "CMD": cmd
                 }
-                self.track_statuses[track_id]["TCP_CLIENT"].send_downlink_command.emit(command)
+                self.tcp_clients[track_id].send_downlink_command.emit(command)
                 self.log(
                     f"上位机发送{'制动' if cmd == 'BRAKE' else '缓解'}指令到第{track_id}道第{device_id}台停车器")
         finally:
@@ -357,8 +359,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         if self.track_statuses[track_id][function][device_id]["STATE"] != parsed_data["STATE"]:
             self.track_statuses[track_id][function][device_id]["STATE"] = parsed_data["STATE"]
             if function == "STOPPER":
-                if parsed_data["STATE"] > StopperState.ERROR_BEGIN:
-                    errors = parsed_data["STATE"] - StopperState.ERROR_BEGIN
+                if parsed_data["STATE"] > StopperState.ERROR_VALVE_ANOMALY:
+                    errors = parsed_data["STATE"] - StopperState.ERROR_VALVE_ANOMALY
                     faulty_valves = []
                     for i in range(5):
                         if errors & (1 << i):
@@ -406,7 +408,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         state = self.track_statuses[track_id][function][device_id]["STATE"]
         mode = self.track_statuses[track_id][function][device_id]["MODE"]
         if function == "STOPPER":
-            if state > StopperState.ERROR_BEGIN or state == StopperState.STATE_INIT:
+            if state > StopperState.ERROR_VALVE_ANOMALY or state == StopperState.STATE_INIT:
                 button.setProperty("state", "error")
                 button.setCheckable(False)
                 button.setEnabled(False)
