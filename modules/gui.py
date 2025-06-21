@@ -58,7 +58,7 @@ anti_slip_state_map = {
     AntiSlipState.STATE_RELEASING_REMOTE: "缓解中（远程）",
     AntiSlipState.STATE_BRAKING_LOCAL: "制动中（检修）",
     AntiSlipState.STATE_RELEASING_LOCAL: "缓解中（检修）",
-    AntiSlipState.STATE_PUSH_AWAY: "主鞋走鞋",
+    AntiSlipState.STATE_PUSH_AWAY: "主鞋推走",
     AntiSlipState.WARNING_NOT_IN_PLACE: "进入远程控制时未正确归位",
     AntiSlipState.ERROR_BOTH_SWITCH_ON: "出现双表示错误",
     AntiSlipState.ERROR_RELEASE_SWITCH_ON: "缓解表示错误出现",
@@ -240,7 +240,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                     f"上位机发送{'制动' if cmd == 'BRAKE' else '缓解'}指令"
                     f"到第{track_id}道"
                     f"第{device_id}台"
-                    f"{'停车器' if function == 'stopper' else '防溜器'}"
+                    f"{'停车器' if function == 'STOPPER' else '防溜器'}"
                 )
         finally:
             self.deselect_all_devices()

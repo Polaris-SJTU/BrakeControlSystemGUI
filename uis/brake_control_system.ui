@@ -1131,7 +1131,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>330</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1143,13 +1143,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -1391,7 +1391,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>870</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1403,13 +1403,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -1611,7 +1611,7 @@ QPushButton:pressed {
      <x>864</x>
      <y>978</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1623,13 +1623,13 @@ QPushButton:pressed {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -1776,7 +1776,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>564</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1788,13 +1788,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -1941,7 +1941,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>839</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1953,13 +1953,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -2391,7 +2391,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>531</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2403,13 +2403,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -2556,7 +2556,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>767</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2568,13 +2568,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -3101,7 +3101,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>808</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3113,13 +3113,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -3376,7 +3376,7 @@ QPushButton:pressed {
      <x>864</x>
      <y>673</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3388,13 +3388,13 @@ QPushButton:pressed {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -3541,7 +3541,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>404</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3553,13 +3553,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -3706,7 +3706,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>908</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3718,13 +3718,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -4214,7 +4214,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>948</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -4226,13 +4226,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -5549,7 +5549,7 @@ QPushButton:pressed {
      <x>960</x>
      <y>257</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -5561,13 +5561,13 @@ QPushButton:pressed {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -5714,7 +5714,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>464</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -5726,13 +5726,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -6029,7 +6029,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>368</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -6041,13 +6041,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -6344,7 +6344,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>600</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -6356,13 +6356,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -7189,7 +7189,7 @@ QPushButton:pressed {
      <x>960</x>
      <y>708</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -7201,13 +7201,13 @@ QPushButton:pressed {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -7449,7 +7449,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>498</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -7461,13 +7461,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -7614,7 +7614,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>636</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -7626,13 +7626,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -7779,7 +7779,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>1016</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -7791,13 +7791,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -8134,7 +8134,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>226</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -8146,13 +8146,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -8614,7 +8614,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>960</x>
      <y>191</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -8626,13 +8626,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -9649,7 +9649,7 @@ QPushButton[state=&quot;releasing&quot;] {
      <x>864</x>
      <y>294</y>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -9661,13 +9661,13 @@ QPushButton[state=&quot;releasing&quot;] {
    <property name="minimumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>54</width>
-     <height>22</height>
+     <height>35</height>
     </size>
    </property>
    <property name="font">
@@ -11953,8 +11953,8 @@ background-color: rgb(180, 197, 231);</string>
     <rect>
      <x>926</x>
      <y>219</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -11965,14 +11965,14 @@ background-color: rgb(180, 197, 231);</string>
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -11997,8 +11997,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>830</x>
      <y>253</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12009,14 +12009,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12041,8 +12041,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>926</x>
      <y>284</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12053,14 +12053,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12085,8 +12085,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>830</x>
      <y>320</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12097,14 +12097,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12129,8 +12129,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>926</x>
      <y>431</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12141,14 +12141,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12173,8 +12173,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>926</x>
      <y>357</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12185,14 +12185,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12217,8 +12217,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>830</x>
      <y>395</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12229,14 +12229,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12261,8 +12261,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>831</x>
      <y>492</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12273,14 +12273,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12305,8 +12305,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>925</x>
      <y>591</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12317,14 +12317,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12349,8 +12349,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>927</x>
      <y>663</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12361,14 +12361,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12393,8 +12393,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>927</x>
      <y>525</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12405,14 +12405,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12437,8 +12437,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>831</x>
      <y>559</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12449,14 +12449,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12481,8 +12481,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>830</x>
      <y>628</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12493,14 +12493,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12525,8 +12525,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>925</x>
      <y>735</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12537,14 +12537,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12569,8 +12569,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>831</x>
      <y>700</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12581,14 +12581,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12613,8 +12613,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>830</x>
      <y>795</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12625,14 +12625,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12657,8 +12657,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>926</x>
      <y>898</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12669,14 +12669,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12745,8 +12745,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>926</x>
      <y>834</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12757,14 +12757,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12789,8 +12789,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>830</x>
      <y>867</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12801,14 +12801,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -12833,8 +12833,8 @@ QLabel[state=&quot;maintain&quot;] {
     <rect>
      <x>830</x>
      <y>935</y>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -12845,14 +12845,14 @@ QLabel[state=&quot;maintain&quot;] {
    </property>
    <property name="minimumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>34</width>
-     <height>8</height>
+     <width>38</width>
+     <height>6</height>
     </size>
    </property>
    <property name="styleSheet">
