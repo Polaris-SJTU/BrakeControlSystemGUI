@@ -247,9 +247,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN12_5.setFont(font)
         self.BTN12_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -257,10 +260,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN12_5.setText("")
         self.BTN12_5.setObjectName("BTN12_5")
         self.BTN23_1 = QtWidgets.QPushButton(Form)
         self.BTN23_1.setGeometry(QtCore.QRect(221, 992, 120, 30))
@@ -414,9 +417,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN9_5.setFont(font)
         self.BTN9_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -424,10 +430,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN9_5.setText("")
         self.BTN9_5.setObjectName("BTN9_5")
         self.BTN9_2 = QtWidgets.QPushButton(Form)
         self.BTN9_2.setGeometry(QtCore.QRect(389, 470, 120, 30))
@@ -511,9 +517,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN22_5.setFont(font)
         self.BTN22_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -521,10 +530,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN22_5.setText("")
         self.BTN22_5.setObjectName("BTN22_5")
         self.BTN12_2 = QtWidgets.QPushButton(Form)
         self.BTN12_2.setGeometry(QtCore.QRect(456, 577, 120, 30))
@@ -980,9 +989,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN16_5.setFont(font)
         self.BTN16_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -990,10 +1002,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN16_5.setText("")
         self.BTN16_5.setObjectName("BTN16_5")
         self.BTN23_4 = QtWidgets.QPushButton(Form)
         self.BTN23_4.setGeometry(QtCore.QRect(864, 978, 54, 22))
@@ -2193,9 +2205,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN19_5.setFont(font)
         self.BTN19_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -2203,10 +2218,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN19_5.setText("")
         self.BTN19_5.setObjectName("BTN19_5")
         self.BTN11_5 = QtWidgets.QPushButton(Form)
         self.BTN11_5.setGeometry(QtCore.QRect(120, 540, 50, 30))
@@ -2220,9 +2235,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN11_5.setFont(font)
         self.BTN11_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -2230,10 +2248,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN11_5.setText("")
         self.BTN11_5.setObjectName("BTN11_5")
         self.BTN15_4 = QtWidgets.QPushButton(Form)
         self.BTN15_4.setGeometry(QtCore.QRect(864, 673, 54, 22))
@@ -2596,9 +2614,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN2_5.setFont(font)
         self.BTN2_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -2606,10 +2627,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN2_5.setText("")
         self.BTN2_5.setObjectName("BTN2_5")
         self.BTN20_2 = QtWidgets.QPushButton(Form)
         self.BTN20_2.setGeometry(QtCore.QRect(454, 882, 120, 30))
@@ -2949,9 +2970,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN4_5.setFont(font)
         self.BTN4_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -2959,10 +2983,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN4_5.setText("")
         self.BTN4_5.setObjectName("BTN4_5")
         self.BTN5_1 = QtWidgets.QPushButton(Form)
         self.BTN5_1.setGeometry(QtCore.QRect(221, 306, 120, 30))
@@ -3536,9 +3560,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN6_5.setFont(font)
         self.BTN6_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -3546,10 +3573,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN6_5.setText("")
         self.BTN6_5.setObjectName("BTN6_5")
         self.BTN13_3 = QtWidgets.QPushButton(Form)
         self.BTN13_3.setGeometry(QtCore.QRect(570, 615, 120, 30))
@@ -3633,9 +3660,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN3_5.setFont(font)
         self.BTN3_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -3643,10 +3673,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN3_5.setText("")
         self.BTN3_5.setObjectName("BTN3_5")
         self.BTN9_1 = QtWidgets.QPushButton(Form)
         self.BTN9_1.setGeometry(QtCore.QRect(221, 470, 120, 30))
@@ -3730,9 +3760,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN10_5.setFont(font)
         self.BTN10_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -3740,10 +3773,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN10_5.setText("")
         self.BTN10_5.setObjectName("BTN10_5")
         self.BTN4_4 = QtWidgets.QPushButton(Form)
         self.BTN4_4.setGeometry(QtCore.QRect(960, 257, 54, 22))
@@ -3989,9 +4022,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN17_5.setFont(font)
         self.BTN17_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -3999,10 +4035,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN17_5.setText("")
         self.BTN17_5.setObjectName("BTN17_5")
         self.BTN10_2 = QtWidgets.QPushButton(Form)
         self.BTN10_2.setGeometry(QtCore.QRect(455, 507, 120, 30))
@@ -4132,9 +4168,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN20_5.setFont(font)
         self.BTN20_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -4142,10 +4181,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN20_5.setText("")
         self.BTN20_5.setObjectName("BTN20_5")
         self.BTN2_2 = QtWidgets.QPushButton(Form)
         self.BTN2_2.setGeometry(QtCore.QRect(450, 201, 120, 30))
@@ -4835,9 +4874,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN7_5.setFont(font)
         self.BTN7_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -4845,10 +4887,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN7_5.setText("")
         self.BTN7_5.setObjectName("BTN7_5")
         self.BTN8_5 = QtWidgets.QPushButton(Form)
         self.BTN8_5.setGeometry(QtCore.QRect(160, 413, 50, 30))
@@ -4862,9 +4904,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN8_5.setFont(font)
         self.BTN8_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -4872,10 +4917,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN8_5.setText("")
         self.BTN8_5.setObjectName("BTN8_5")
         self.BTN16_4 = QtWidgets.QPushButton(Form)
         self.BTN16_4.setGeometry(QtCore.QRect(960, 708, 54, 22))
@@ -5609,9 +5654,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN23_5.setFont(font)
         self.BTN23_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -5619,10 +5667,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN23_5.setText("")
         self.BTN23_5.setObjectName("BTN23_5")
         self.BTN24_5 = QtWidgets.QPushButton(Form)
         self.BTN24_5.setGeometry(QtCore.QRect(160, 1026, 50, 30))
@@ -5636,9 +5684,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN24_5.setFont(font)
         self.BTN24_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -5646,10 +5697,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN24_5.setText("")
         self.BTN24_5.setObjectName("BTN24_5")
         self.BTN15_5 = QtWidgets.QPushButton(Form)
         self.BTN15_5.setGeometry(QtCore.QRect(120, 684, 50, 30))
@@ -5663,9 +5714,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN15_5.setFont(font)
         self.BTN15_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -5673,10 +5727,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN15_5.setText("")
         self.BTN15_5.setObjectName("BTN15_5")
         self.BTN11_2 = QtWidgets.QPushButton(Form)
         self.BTN11_2.setGeometry(QtCore.QRect(389, 542, 120, 30))
@@ -5760,9 +5814,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN14_5.setFont(font)
         self.BTN14_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -5770,10 +5827,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN14_5.setText("")
         self.BTN14_5.setObjectName("BTN14_5")
         self.BTN10_3 = QtWidgets.QPushButton(Form)
         self.BTN10_3.setGeometry(QtCore.QRect(635, 507, 120, 30))
@@ -6043,9 +6100,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN21_5.setFont(font)
         self.BTN21_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -6053,10 +6113,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN21_5.setText("")
         self.BTN21_5.setObjectName("BTN21_5")
         self.BTN5_5 = QtWidgets.QPushButton(Form)
         self.BTN5_5.setGeometry(QtCore.QRect(125, 303, 50, 30))
@@ -6070,9 +6130,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN5_5.setFont(font)
         self.BTN5_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -6080,10 +6143,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN5_5.setText("")
         self.BTN5_5.setObjectName("BTN5_5")
         self.BTN24_2 = QtWidgets.QPushButton(Form)
         self.BTN24_2.setGeometry(QtCore.QRect(454, 1030, 120, 30))
@@ -6633,9 +6696,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN13_5.setFont(font)
         self.BTN13_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -6643,10 +6709,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN13_5.setText("")
         self.BTN13_5.setObjectName("BTN13_5")
         self.BTN18_5 = QtWidgets.QPushButton(Form)
         self.BTN18_5.setGeometry(QtCore.QRect(160, 816, 50, 30))
@@ -6660,9 +6726,12 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.BTN18_5.setFont(font)
         self.BTN18_5.setStyleSheet("/* 正常状态 */\n"
 "QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
 "    border-radius: 0px;             /* 直角矩形 */\n"
 "    background-color: rgb(170, 0, 255); /* 绿色背景 */\n"
 "    border-radius: 8px; /* 圆角半径 */\n"
@@ -6670,10 +6739,10 @@ class Ui_Form(object):
 "\n"
 "/* 按下状态（保持不透明） */\n"
 "QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
 "    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */\n"
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
-        self.BTN18_5.setText("")
         self.BTN18_5.setObjectName("BTN18_5")
         self.line_9 = QtWidgets.QFrame(Form)
         self.line_9.setGeometry(QtCore.QRect(60, 696, 980, 4))
@@ -8559,14 +8628,18 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "通辽站下行编尾停车防溜器控制系统"))
         self.BTN16_1.setText(_translate("Form", "停车器1"))
+        self.BTN12_5.setText(_translate("Form", "股道"))
         self.BTN23_1.setText(_translate("Form", "停车器1"))
         self.BTN21_3.setText(_translate("Form", "停车器3"))
+        self.BTN9_5.setText(_translate("Form", "股道"))
         self.BTN9_2.setText(_translate("Form", "停车器2"))
+        self.BTN22_5.setText(_translate("Form", "股道"))
         self.BTN12_2.setText(_translate("Form", "停车器2"))
         self.BTN22_1.setText(_translate("Form", "停车器1"))
         self.BTN8_3.setText(_translate("Form", "停车器3"))
         self.BTN18_2.setText(_translate("Form", "停车器2"))
         self.BTN12_3.setText(_translate("Form", "停车器3"))
+        self.BTN16_5.setText(_translate("Form", "股道"))
         self.BTN7_3.setText(_translate("Form", "停车器3"))
         self.BTN13_1.setText(_translate("Form", "停车器1"))
         self.BTN11_3.setText(_translate("Form", "停车器3"))
@@ -8580,13 +8653,17 @@ class Ui_Form(object):
         self.BTN2_3.setText(_translate("Form", "停车器3"))
         self.BTN19_1.setText(_translate("Form", "停车器1"))
         self.BTN3_2.setText(_translate("Form", "停车器2"))
+        self.BTN19_5.setText(_translate("Form", "股道"))
+        self.BTN11_5.setText(_translate("Form", "股道"))
         self.BTN13_2.setText(_translate("Form", "停车器2"))
         self.BTN11_1.setText(_translate("Form", "停车器1"))
         self.BTN2_1.setText(_translate("Form", "停车器1"))
+        self.BTN2_5.setText(_translate("Form", "股道"))
         self.BTN20_2.setText(_translate("Form", "停车器2"))
         self.BTN24_1.setText(_translate("Form", "停车器1"))
         self.BTN18_3.setText(_translate("Form", "停车器3"))
         self.BTN15_2.setText(_translate("Form", "停车器2"))
+        self.BTN4_5.setText(_translate("Form", "股道"))
         self.BTN5_1.setText(_translate("Form", "停车器1"))
         self.BTN17_1.setText(_translate("Form", "停车器1"))
         self.BTN14_2.setText(_translate("Form", "停车器2"))
@@ -8595,11 +8672,16 @@ class Ui_Form(object):
         self.BTN19_2.setText(_translate("Form", "停车器2"))
         self.BTN18_1.setText(_translate("Form", "停车器1"))
         self.BTN24_3.setText(_translate("Form", "停车器3"))
+        self.BTN6_5.setText(_translate("Form", "股道"))
         self.BTN13_3.setText(_translate("Form", "停车器3"))
+        self.BTN3_5.setText(_translate("Form", "股道"))
         self.BTN9_1.setText(_translate("Form", "停车器1"))
+        self.BTN10_5.setText(_translate("Form", "股道"))
         self.BTN7_2.setText(_translate("Form", "停车器2"))
         self.BTN5_2.setText(_translate("Form", "停车器2"))
+        self.BTN17_5.setText(_translate("Form", "股道"))
         self.BTN10_2.setText(_translate("Form", "停车器2"))
+        self.BTN20_5.setText(_translate("Form", "股道"))
         self.BTN2_2.setText(_translate("Form", "停车器2"))
         self.BTN16_3.setText(_translate("Form", "停车器3"))
         self.BTN20_3.setText(_translate("Form", "停车器3"))
@@ -8609,6 +8691,8 @@ class Ui_Form(object):
         self.BTN21_2.setText(_translate("Form", "停车器2"))
         self.BTN5_3.setText(_translate("Form", "停车器3"))
         self.BTN17_3.setText(_translate("Form", "停车器3"))
+        self.BTN7_5.setText(_translate("Form", "股道"))
+        self.BTN8_5.setText(_translate("Form", "股道"))
         self.BTN22_3.setText(_translate("Form", "停车器3"))
         self.BTN17_2.setText(_translate("Form", "停车器2"))
         self.BTN14_1.setText(_translate("Form", "停车器1"))
@@ -8616,10 +8700,16 @@ class Ui_Form(object):
         self.BTN15_1.setText(_translate("Form", "停车器1"))
         self.BTN3_1.setText(_translate("Form", "停车器1"))
         self.BTN6_1.setText(_translate("Form", "停车器1"))
+        self.BTN23_5.setText(_translate("Form", "股道"))
+        self.BTN24_5.setText(_translate("Form", "股道"))
+        self.BTN15_5.setText(_translate("Form", "股道"))
         self.BTN11_2.setText(_translate("Form", "停车器2"))
+        self.BTN14_5.setText(_translate("Form", "股道"))
         self.BTN10_3.setText(_translate("Form", "停车器3"))
         self.BTN10_1.setText(_translate("Form", "停车器1"))
         self.BTN23_3.setText(_translate("Form", "停车器3"))
+        self.BTN21_5.setText(_translate("Form", "股道"))
+        self.BTN5_5.setText(_translate("Form", "股道"))
         self.BTN24_2.setText(_translate("Form", "停车器2"))
         self.BTN19_3.setText(_translate("Form", "停车器3"))
         self.BTN8_2.setText(_translate("Form", "停车器2"))
@@ -8627,6 +8717,8 @@ class Ui_Form(object):
         self.BTN4_3.setText(_translate("Form", "停车器3"))
         self.BTN14_3.setText(_translate("Form", "停车器3"))
         self.BTN15_3.setText(_translate("Form", "停车器3"))
+        self.BTN13_5.setText(_translate("Form", "股道"))
+        self.BTN18_5.setText(_translate("Form", "股道"))
         self.label_27.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:18pt;\">3</span></p></body></html>"))
         self.label_30.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:18pt;\">4</span></p></body></html>"))
         self.label_34.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:18pt;\">6</span></p></body></html>"))

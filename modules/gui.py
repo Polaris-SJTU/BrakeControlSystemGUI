@@ -15,7 +15,7 @@ class StopperState(enum.IntEnum):
     STATE_STOP_AT_BRAKE = 2,
     STATE_STOP_AT_RELEASE = 3,
     STATE_MAINTAIN = 4,
-    ERROR_BEGIN = 100
+    ERROR_VALVE_ANOMALY = 100
 
 
 stopper_state_map = {
@@ -23,6 +23,7 @@ stopper_state_map = {
     StopperState.STATE_STOP_AT_BRAKE: "处于制动状态",
     StopperState.STATE_STOP_AT_RELEASE: "处于缓解状态",
     StopperState.STATE_MAINTAIN: "处于检修状态",
+    StopperState.ERROR_VALVE_ANOMALY: "无指令电磁阀异动"
 }
 
 
@@ -104,6 +105,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
 
         # 设置设备状态
         self.track_statuses = {}
+        self.tcp_clients = {}
         self._initialize_track_statuses()
 
         self.timer = QTimer(self)
@@ -157,17 +159,17 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                 "TRACK": 0,
                 "CMD": "QUERY"
             }
-            self.track_statuses[track_id]["TCP_CLIENT"].send_downlink_command.emit(query_command)
+            self.tcp_clients[track_id].send_downlink_command.emit(query_command)
 
     def _initialize_last_report_time(self):
         for track_id in range(2, 2 + 23):
-            for device_id in range(1, 3):
+            for device_id in range(1, 1 + 3):
                 self.last_report_time[(track_id, "STOPPER", device_id)] = datetime.datetime.now()
             self.last_report_time[(track_id, "ANTI_SLIP", 1)] = datetime.datetime.now()
 
     def _initialize_track_statuses(self):
         """Initializes the device status dictionary with default values."""
-        for track_id, port in zip(range(2, 2 + 23), range(1030, 1030 + 23)):
+        for track_id, port in zip(range(2, 2 + 23), range(1031, 1031 + 23)):
             self.track_statuses[track_id] = {
                 "STOPPER": {
                     1: {
@@ -196,10 +198,10 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                         "IO_16_9": 0xFF,
                         "IO_8_1": 0xFF
                     }
-                },
-                "TCP_CLIENT": DownlinkTcpClient(self.downlink_host, port)
+                }
             }
-            for device_id in range(1, 3):
+            self.tcp_clients[track_id] = DownlinkTcpClient(self.downlink_host, port)
+            for device_id in range(1, 1 + 3):
                 self.update_device_button(track_id, "STOPPER", device_id)
                 button = getattr(self, f"BTN{track_id}_{device_id}")
                 button.clicked.connect(self.create_device_handler(track_id, "STOPPER", device_id))
@@ -208,7 +210,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             button.clicked.connect(self.create_device_handler(track_id, "ANTI_SLIP", 1))
             button = getattr(self, f"BTN{track_id}_{5}")
             button.clicked.connect(self.create_track_handler(track_id))
-            self.track_statuses[track_id]["TCP_CLIENT"].parsed_uplink_packet.connect(self._update_device_status)
+            self.tcp_clients[track_id].parsed_uplink_packet.connect(self._update_device_status)
 
             self.BTN_brake.clicked.connect(self.send_brake_command)
             self.BTN_release.clicked.connect(self.send_release_command)
@@ -233,9 +235,13 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                     "TRACK": track_id,
                     "CMD": cmd
                 }
-                self.track_statuses[track_id]["TCP_CLIENT"].send_downlink_command.emit(command)
+                self.tcp_clients[track_id].send_downlink_command.emit(command)
                 self.log(
-                    f"上位机发送{'制动' if cmd == 'BRAKE' else '缓解'}指令到第{track_id}道第{device_id}台停车器")
+                    f"上位机发送{'制动' if cmd == 'BRAKE' else '缓解'}指令"
+                    f"到第{track_id}道"
+                    f"第{device_id}台"
+                    f"{'停车器' if function == 'stopper' else '防溜器'}"
+                )
         finally:
             self.deselect_all_devices()
 
@@ -247,7 +253,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         # 清除设备选择状态
         for track_id in range(2, 2 + 23):
             # 处理单个设备按钮
-            for device_id in range(2, 5):
+            for device_id in range(1, 1 + 4):
                 button = getattr(self, f"BTN{track_id}_{device_id}")
                 if button.isChecked():
                     button.setChecked(False)
@@ -266,13 +272,13 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         def handler():
             checked = 0
             enabled = 0
-            for device_id in range(1, 5):
+            for device_id in range(1, 1 + 4):
                 button = getattr(self, f"BTN{track_id}_{device_id}")
                 if button.isChecked():
                     checked += 1
                 if button.isEnabled():
                     enabled += 1
-            for device_id in range(1, 5):
+            for device_id in range(1, 1 + 4):
                 button = getattr(self, f"BTN{track_id}_{device_id}")
                 if checked != enabled and button.isEnabled():
                     self.select_device(track_id, "ANTI_SLIP" if device_id == 4 else "STOPPER",
@@ -357,8 +363,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         if self.track_statuses[track_id][function][device_id]["STATE"] != parsed_data["STATE"]:
             self.track_statuses[track_id][function][device_id]["STATE"] = parsed_data["STATE"]
             if function == "STOPPER":
-                if parsed_data["STATE"] > StopperState.ERROR_BEGIN:
-                    errors = parsed_data["STATE"] - StopperState.ERROR_BEGIN
+                if parsed_data["STATE"] > StopperState.ERROR_VALVE_ANOMALY:
+                    errors = parsed_data["STATE"] - StopperState.ERROR_VALVE_ANOMALY
                     faulty_valves = []
                     for i in range(5):
                         if errors & (1 << i):
@@ -406,7 +412,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         state = self.track_statuses[track_id][function][device_id]["STATE"]
         mode = self.track_statuses[track_id][function][device_id]["MODE"]
         if function == "STOPPER":
-            if state > StopperState.ERROR_BEGIN or state == StopperState.STATE_INIT:
+            if state > StopperState.ERROR_VALVE_ANOMALY or state == StopperState.STATE_INIT:
                 button.setProperty("state", "error")
                 button.setCheckable(False)
                 button.setEnabled(False)
@@ -426,45 +432,42 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             button.style().polish(button)
         else:
             label = getattr(self, f"label_anti_slip_{track_id}")
-            if state >= AntiSlipState.WARNING_NOT_IN_PLACE or state == AntiSlipState.STATE_INIT or state == AntiSlipState.STATE_PUSH_AWAY:
+            io_state_low = self.track_statuses[track_id][function][device_id]["IO_8_1"]
+            push_away_deputy1 = (io_state_low & 0b00001000) == 0
+            push_away_deputy2 = (io_state_low & 0b00010000) == 0
+            if state >= AntiSlipState.WARNING_NOT_IN_PLACE or state in [AntiSlipState.STATE_INIT, AntiSlipState.STATE_PUSH_AWAY] or push_away_deputy1 or push_away_deputy2:
                 button.setProperty("state", "error")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "error")
             elif mode == "LOCAL_CONTROL":
                 button.setProperty("state", "maintain")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "maintain")
             elif state == AntiSlipState.STATE_BRAKING_REMOTE:
                 button.setProperty("state", "braking")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "release")
             elif state == AntiSlipState.STATE_RELEASING_REMOTE:
                 button.setProperty("state", "releasing")
                 button.setCheckable(False)
                 button.setEnabled(False)
+                label.setProperty("state", "release")
             elif state == AntiSlipState.STATE_STOP_AT_BRAKE_REMOTE:
                 button.setProperty("state", "brake")
                 button.setCheckable(True)
                 button.setEnabled(True)
+                label.setProperty("state", "release")
             elif state == AntiSlipState.STATE_STOP_AT_RELEASE_REMOTE:
                 button.setProperty("state", "release")
                 button.setCheckable(True)
                 button.setEnabled(True)
+                label.setProperty("state", "release")
             button.style().unpolish(button)
             button.style().polish(button)
             button.update()
-
-            io_state_low = self.track_statuses[track_id][function][device_id]["IO_8_1"]
-            push_away_deputy1 = (io_state_low & 0b00001000) == 0
-            push_away_deputy2 = (io_state_low & 0b00010000) == 0
-            if state >= AntiSlipState.WARNING_NOT_IN_PLACE or state == AntiSlipState.STATE_INIT:
-                label.setProperty("state", "error")
-            elif mode == "LOCAL_CONTROL":
-                label.setProperty("state", "maintain")
-            elif push_away_deputy1 or push_away_deputy2:
-                label.setProperty("state", "error")
-            else:
-                label.setProperty("state", "release")
             label.style().unpolish(label)
             label.style().polish(label)
 
@@ -551,8 +554,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
     def lock_all_buttons(self):
         """禁用所有按钮"""
         # 禁用 BTN2_1 到 BTN24_5
-        for x in range(2, 25):  # x = 2 到 24
-            for i in range(1, 6):  # i = 1 到 5
+        for x in range(2, 2 + 23):  # x = 2 到 24
+            for i in range(1, 1 + 5):  # i = 1 到 5
                 button = getattr(self, f"BTN{x}_{i}")
                 button.setEnabled(False)
 
@@ -564,8 +567,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
     def unlock_all_buttons(self):
         """启用所有按钮"""
         # 启用 BTN2_1 到 BTN24_5
-        for x in range(2, 25):  # x = 2 到 24
-            for i in range(1, 6):  # i = 1 到 5
+        for x in range(2, 2 + 23):  # x = 2 到 24
+            for i in range(1, 1 + 5):  # i = 1 到 5
                 button = getattr(self, f"BTN{x}_{i}")
                 button.setEnabled(True)
 

@@ -516,11 +516,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -528,12 +531,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN23_1">
@@ -757,11 +761,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -769,12 +776,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN9_2">
@@ -903,11 +911,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -915,12 +926,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN12_2">
@@ -1569,11 +1581,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -1581,12 +1596,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN23_4">
@@ -3275,11 +3291,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -3287,12 +3306,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN11_5">
@@ -3326,11 +3346,14 @@ QPushButton:pressed {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -3338,12 +3361,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN15_4">
@@ -3875,11 +3899,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -3887,12 +3914,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN20_2">
@@ -4376,11 +4404,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -4388,12 +4419,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN5_1">
@@ -5187,11 +5219,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -5199,12 +5234,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN13_3">
@@ -5333,11 +5369,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -5345,12 +5384,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN9_1">
@@ -5479,11 +5519,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -5491,12 +5534,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN4_4">
@@ -5860,11 +5904,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -5872,12 +5919,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN10_2">
@@ -6076,11 +6124,14 @@ QPushButton[state=&quot;braking&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -6088,12 +6139,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN2_2">
@@ -7052,11 +7104,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -7064,12 +7119,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN8_5">
@@ -7103,11 +7159,14 @@ QPushButton:pressed {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -7115,12 +7174,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN16_4">
@@ -8169,11 +8229,14 @@ QPushButton[state=&quot;braking&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -8181,12 +8244,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN24_5">
@@ -8220,11 +8284,14 @@ QPushButton:pressed {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -8232,12 +8299,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN15_5">
@@ -8271,11 +8339,14 @@ QPushButton:pressed {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -8283,12 +8354,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN11_2">
@@ -8417,11 +8489,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -8429,12 +8504,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN10_3">
@@ -8823,11 +8899,14 @@ QPushButton[state=&quot;releasing&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -8835,12 +8914,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN5_5">
@@ -8874,11 +8954,14 @@ QPushButton:pressed {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -8886,12 +8969,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN24_2">
@@ -9660,11 +9744,14 @@ QPushButton[state=&quot;braking&quot;] {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -9672,12 +9759,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN18_5">
@@ -9711,11 +9799,14 @@ QPushButton:pressed {
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">/* 正常状态 */
 QPushButton {
+	color: rgb(255, 255, 255);
     border-radius: 0px;             /* 直角矩形 */
     background-color: rgb(170, 0, 255); /* 绿色背景 */
 	border-radius: 8px; /* 圆角半径 */
@@ -9723,12 +9814,13 @@ QPushButton {
 
 /* 按下状态（保持不透明） */
 QPushButton:pressed {
-    background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 0, 230); /* 按下时变暗，但不透明 */
     border: 1px solid #888;           /* 添加边框增强点击反馈 */
 }</string>
    </property>
    <property name="text">
-    <string/>
+    <string>股道</string>
    </property>
   </widget>
   <widget class="Line" name="line_9">
