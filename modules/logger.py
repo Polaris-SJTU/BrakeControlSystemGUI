@@ -32,8 +32,15 @@ class Logger(QObject):
     def _init_window(self):
         """初始化日志显示窗口"""
         form = QWidget()
+        # form.setWindowFlags(
+        #     form.windowFlags() | QtCore.Qt.WindowStaysOnTopHint
+        # )
         form.setWindowFlags(
-            form.windowFlags() | QtCore.Qt.WindowStaysOnTopHint
+                QtCore.Qt.Window |
+                QtCore.Qt.WindowTitleHint |
+                QtCore.Qt.CustomizeWindowHint |
+                QtCore.Qt.WindowCloseButtonHint |
+                QtCore.Qt.WindowStaysOnTopHint  # 添加此标志位
         )
         self.ui = Ui_Form()
         self.ui.setupUi(form)
